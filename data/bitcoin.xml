@@ -4,7 +4,7 @@
 
         <record id="payment_acquirer_bitcoin" model="payment.acquirer">
             <field name="name">Bitcoin Payment</field>
-            <field name="image" type="base64" file="payment_bitcoin/static/description/icon.png"/>
+            <field name="image" type="base64" file="payment_bitcoin/static/src/bitcoin_logo.png"/>
             <field name="provider">bitcoin</field>
             <field name="company_id" ref="base.main_company"/>
             <field name="view_template_id" ref="bitcoin_acquirer_button"/>
