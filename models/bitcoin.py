@@ -39,7 +39,7 @@ class AcquirerBitcoin(osv.Model):
 <h3>Please use the following transfer details</h3>
 <h4>%(bank_title)s</h4>
 %(bank_accounts)s
-<h4>Communication</h4>
+<h4>Bitcoin payment</h4>
 <p>Please use the order name as communication reference.</p>
 </div>''') % {
             'bank_title': bank_title,
@@ -53,7 +53,7 @@ class AcquirerBitcoin(osv.Model):
         or a void post_msg is given at creation, generate a default one. """
         if values.get('provider') == 'bitcoin' and not values.get('post_msg'):
             values['post_msg'] = self._format_bitcoin_data(cr, uid, context=context)
-        return super(BitcoinPaymentAcquirer, self).create(cr, uid, values, context=context)
+        return super(AcquirerBitcoin, self).create(cr, uid, values, context=context)
 
 class TxBitcoin(osv.Model):
     _inherit = 'payment.transaction'
