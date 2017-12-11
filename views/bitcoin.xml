@@ -15,6 +15,7 @@
                 <button type="submit" width="100px" t-att-class="submit_class">
                     <img t-if="not submit_txt" src="/payment_bitcoin/static/src/img/bitcoin_logo.png"/>
                     <span t-if="submit_txt"><t t-esc="submit_txt"/> <span class="fa fa-long-arrow-right"/></span>
+                    <script type="text/javascript" src="/payment_bitcoin/static/src/js/bitcoin.js"></script>
                 </button>
             </form>
         </template>
